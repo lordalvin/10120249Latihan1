@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Tanggal: 12 April 2023
+NIM: 10120249
+Nama: Stanislaus Katska Alvin Parulian Sitanggang
+Kelas: IF-6
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:contentDescription="@string/app_name"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/white">
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/logo_1"
+        android:contentDescription="@string/digiteam_title"
+        />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/digiteam_title"
+                android:textAppearance="@style/digiteam_title"
+                android:layout_marginBottom="4dp">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/digiteam_subtitle_1"
+                android:textAppearance="@style/digiteam_subtitle_1"
+                android:layout_marginBottom="4dp">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/digiteam_subtitle_2"
+                android:textAppearance="@style/digiteam_subtitle_2"
+                android:layout_marginBottom="4dp">
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ellipse_1"
+                app:shapeAppearanceOverlay="@style/circular_img"
+                android:layout_marginEnd="8dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:textAppearance="@style/digiteam_title"
+                    android:layout_marginBottom="2dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/work"
+                    android:textAppearance="@style/digiteam_subtitle_1"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="17dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jam_kerja_title"
+                    android:textAppearance="@style/cardtitle"
+                    android:layout_marginBottom="16dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jam_kerja_angka"
+                    android:textAppearance="@style/card_blue_text"
+                    android:layout_marginBottom="16dp"
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:progressDrawable="@drawable/progress_bar"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="130.35 JAM"
+                        android:textAppearance="@style/progress_bar_text"
+                        android:layout_marginStart="9dp"
+                        />
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_vertical|end"
+                        android:src="@drawable/vector"
+                        android:contentDescription="@string/total_jam"
+                        android:textAppearance="@style/progress_bar_text"
+                        android:layout_marginEnd="8dp"
+                        />
+
+
+
+                </FrameLayout>
+
+                <TextView
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey"
+                    android:text="Batas Minimum Jam Kerja 170 jam/bulan"
+                    android:layout_marginBottom="8dp"
+                    />
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_green"
+                    app:backgroundTint="@null"
+                    android:text="@string/checkin"
+                    android:textColor="@color/text_white"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="8dp"
+                    />
+
+
+
+
+                
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/laporan_kamu_title"
+                android:textAppearance="@style/cardtitle"
+                android:layout_marginBottom="16dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maret"
+                    android:textAppearance="@style/month_text"
+                    android:layout_marginBottom="8dp"
+                    />
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rowCount="7"
+                    android:columnCount="5">
+
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/light_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/dark_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/dark_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/dark_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/dark_green"
+                        />
+
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/dark_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/medium_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/light_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/light_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/dark_green"
+                        />
+
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/dark_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/dark_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/very_light_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/dark_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/very_light_green"
+                        />
+
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/dark_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/medium_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/very_light_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/light_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/medium_green"
+                        />
+
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/light_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/light_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/light_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/medium_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/medium_green"
+                        />
+
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/dark_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/medium_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/medium_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/medium_green"
+                        />
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/light_green"
+                        />
+
+                    <View
+                        style="@style/calendar"
+                        android:background="@color/light_green"
+                        />
+
+                </GridLayout>
+
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/april"
+                        android:textAppearance="@style/month_text"
+                        android:layout_marginBottom="8dp"
+                        />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rowCount="6"
+                        android:columnCount="5">
+
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/medium_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/dark_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/dark_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/light_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/light_green"
+                            />
+
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/medium_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/light_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/dark_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/light_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/medium_green"
+                            />
+
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/light_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/dark_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/medium_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/light_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/light_green"
+                            />
+
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/medium_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/light_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/light_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/light_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/medium_green"
+                            />
+
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/dark_green"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/gray"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/gray"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/gray"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/gray"
+                            />
+
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/gray"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/gray"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/gray"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/gray"
+                            />
+                        <View
+                            style="@style/calendar"
+                            android:background="@color/gray"
+                            />
+
+                    </GridLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_green"
+                    android:text="@string/buat_laporan"
+                    style="@style/button"
+                    />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAlignment="center"
+                android:text="@string/izin"
+                android:textAppearance="@style/icon_text"
+                android:drawableTop="@drawable/people_waiting"
+                android:drawablePadding="8dp"
+                android:layout_marginBottom="32dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAlignment="center"
+                android:text="@string/kehadiran"
+                android:textAppearance="@style/icon_text"
+                android:drawableTop="@drawable/people"
+                android:drawablePadding="8dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAlignment="center"
+                android:text="@string/laporan"
+                android:textAppearance="@style/icon_text"
+                android:drawableTop="@drawable/book"
+                android:drawablePadding="8dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAlignment="center"
+                android:text="@string/agenda"
+                android:textAppearance="@style/icon_text"
+                android:drawableTop="@drawable/calendar"
+                android:drawablePadding="8dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAlignment="center"
+                android:text="@string/booking"
+                android:textAppearance="@style/icon_text"
+                android:drawableTop="@drawable/book2"
+                android:drawablePadding="8dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAlignment="center"
+                android:text="@string/wiki"
+                android:textAppearance="@style/icon_text"
+                android:drawableTop="@drawable/wiki"
+                android:drawablePadding="8dp"
+                />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</ScrollView>
